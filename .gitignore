@@ -1,4 +1,12 @@
-*.pyc
 __pycache__/
-.DS_Store
-*.log
+*.pyc
+*.pyo
+*.pyd
+*.zip
+*.tar.gz
+*.egg-info/
+.env
+.venv
+.idea/
+.vscode/
+.ipynb_checkpoints/
