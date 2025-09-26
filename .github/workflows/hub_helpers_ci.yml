@@ -1,0 +1,21 @@
+name: Hub Helpers CI
+
+on: [push, pull_request]
+
+jobs:
+  run-helpers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies (if any)
+        run: pip install -r requirements.txt || true
+
+      - name: Run helper tests
+        run: python3 helper_runner.py
